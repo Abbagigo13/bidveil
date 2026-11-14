@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Bidveil mark">
+  <rect width="256" height="256" fill="#101827"/>
+  <path d="M80 48v160M176 48v160" stroke="#F7F5F0" stroke-width="14" transform="skewX(-12)"/>
+  <rect x="111" y="104" width="34" height="34" fill="#315CFF"/>
+</svg>
