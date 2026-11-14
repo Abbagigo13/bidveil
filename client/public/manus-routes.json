@@ -1,1 +1,1 @@
-{"routes":[{"path":"/","title":"Bidveil — Private procurement"},{"path":"/dashboard","title":"Bidveil — Dashboard preview"}]}
+{"routes":[{"path":"/","title":"Bidveil — Private procurement"},{"path":"/dashboard","title":"Bidveil — Dashboard"},{"path":"/dashboard/tenders/new","title":"Bidveil — Create tender"},{"path":"/dashboard/tenders/:id","title":"Bidveil — Tender details"},{"path":"/dashboard/invitations/:id","title":"Bidveil — Supplier bid"}]}

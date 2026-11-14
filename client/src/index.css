@@ -430,3 +430,146 @@ button:focus-visible, a:focus-visible { outline: 3px solid rgba(49, 92, 255, 0.4
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Phase 1 workflow screens */
+.back-link { display: inline-flex; align-items: center; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 600; }
+.back-link:hover { color: var(--blue); }
+.workflow-inner { padding-bottom: 90px; }
+.workflow-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin: 55px 0 43px; }
+.workflow-heading--compact { align-items: start; }
+.workflow-heading h1, .tender-detail-heading h1, .success-state h1 { margin: 13px 0 0; font-family: var(--serif); font-size: clamp(48px, 5vw, 70px); font-weight: 400; letter-spacing: -0.065em; line-height: 0.9; }
+.workflow-heading h1 em, .success-state h1 em { color: var(--blue); font-style: normal; }
+.workflow-heading p, .tender-detail-heading p { max-width: 570px; margin: 22px 0 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.workflow-progress { display: flex; align-items: center; gap: 7px; padding-bottom: 8px; }
+.workflow-progress span { width: 42px; height: 3px; background: var(--line); }
+.workflow-progress span.active { background: var(--blue); }
+.workflow-layout, .supplier-flow-layout { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr); gap: 23px; align-items: start; }
+.workflow-form { border-top: 1px solid var(--ink); background: var(--paper); }
+.workflow-form__section { padding: 31px 34px 37px; }
+.workflow-form__section + .workflow-form__section { border-top: 1px solid var(--line); }
+.workflow-form__section h2 { margin: 12px 0 28px; font-family: var(--serif); font-size: 32px; font-weight: 400; letter-spacing: -0.05em; }
+.form-intro { max-width: 550px; margin: -10px 0 25px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.workflow-form label { display: block; margin-top: 21px; color: var(--ink-soft); font-family: var(--mono); font-size: 9px; letter-spacing: 0.06em; text-transform: uppercase; }
+.workflow-form input, .workflow-form textarea, .workflow-form select { width: 100%; margin-top: 9px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 0; outline: none; background: var(--white); color: var(--ink); font-family: var(--sans); font-size: 14px; letter-spacing: 0; text-transform: none; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.workflow-form input:focus, .workflow-form textarea:focus, .workflow-form select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(49, 92, 255, 0.12); }
+.workflow-form textarea { resize: vertical; line-height: 1.55; }
+.workflow-form select { appearance: auto; }
+.workflow-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; padding: 18px 34px; border-top: 1px solid var(--line); }
+.button--secondary { border: 1px solid var(--line); background: var(--white); color: var(--ink); }
+.button--secondary:hover { border-color: var(--ink); }
+.button:disabled { cursor: not-allowed; opacity: 0.45; transform: none; }
+.workflow-aside { display: grid; gap: 18px; }
+.privacy-note { padding: 23px 22px; border-top: 2px solid var(--blue); background: var(--blue-soft); }
+.privacy-note > svg { color: var(--blue); }
+.privacy-note .mono-label { display: block; margin-top: 19px; color: var(--blue); }
+.privacy-note h3 { margin: 10px 0 0; font-family: var(--serif); font-size: 26px; font-weight: 400; letter-spacing: -0.04em; line-height: 0.98; }
+.privacy-note p { margin: 17px 0 0; color: var(--ink-soft); font-size: 12px; line-height: 1.6; }
+.privacy-note--violet { border-top-color: var(--violet); background: var(--violet-soft); }
+.privacy-note--violet > svg, .privacy-note--violet .mono-label { color: var(--violet); }
+.privacy-note ul { display: grid; gap: 12px; margin: 19px 0 0; padding: 0; list-style: none; color: var(--ink-soft); font-family: var(--mono); font-size: 9px; }
+.privacy-note li { display: flex; align-items: center; gap: 7px; }
+.privacy-note li svg { color: var(--violet); }
+.workflow-summary { padding: 22px; border-top: 1px solid var(--ink); background: var(--paper); }
+.workflow-summary > strong { display: block; margin: 16px 0; font-family: var(--serif); font-size: 25px; font-weight: 400; letter-spacing: -0.04em; }
+.workflow-summary > div { display: flex; align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 11px; }
+.workflow-summary > div svg { color: var(--blue); }
+.workflow-summary__rule { height: 1px; margin: 13px 0 !important; padding: 0 !important; border-top: 1px dashed var(--line); }
+.workflow-summary small { color: var(--muted); font-family: var(--mono); font-size: 8px; line-height: 1.5; }
+.requirement-list { border-top: 1px solid var(--line); }
+.requirement-row { display: grid; grid-template-columns: 34px minmax(0, 1fr) 25px; gap: 10px; align-items: center; min-height: 52px; border-bottom: 1px solid var(--line); color: var(--ink-soft); font-size: 13px; }
+.requirement-row__number { color: var(--blue); font-family: var(--mono); font-size: 9px; }
+.requirement-row button { color: var(--muted); }
+.requirement-row button:hover { color: var(--red); }
+.requirement-add { display: flex; gap: 8px; margin-top: 17px; }
+.requirement-add input { margin-top: 0; }
+.requirement-add button { display: grid; width: 47px; flex: 0 0 auto; place-items: center; border: 1px solid var(--ink); background: var(--ink); color: var(--ivory); }
+.supplier-brief { padding: 29px 34px; border-bottom: 1px solid var(--line); background: #f1f0eb; }
+.supplier-brief h2 { margin: 12px 0 0; font-family: var(--serif); font-size: 35px; font-weight: 400; letter-spacing: -0.05em; }
+.supplier-brief p { max-width: 620px; margin: 18px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.supplier-brief__meta { display: flex; flex-wrap: wrap; gap: 8px 21px; margin-top: 16px; color: var(--ink-soft); font-family: var(--mono); font-size: 9px; }
+.supplier-brief__meta span::before { content: "—"; margin-right: 6px; color: var(--blue); }
+.success-state { max-width: 700px; margin: 86px auto 0; text-align: center; }
+.success-state__icon { display: grid; width: 62px; height: 62px; margin: 0 auto 25px; place-items: center; border: 1px solid var(--green); color: var(--green); background: var(--green-soft); }
+.success-state .mono-label { color: var(--green); }
+.success-state h1 { margin-top: 16px; }
+.success-state > p { max-width: 430px; margin: 22px auto 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.receipt-box { max-width: 470px; margin: 37px auto 28px; padding: 22px; border-top: 1px solid var(--ink); background: var(--paper); text-align: left; }
+.receipt-box > strong { display: block; margin: 13px 0 21px; color: var(--blue); font-family: var(--mono); font-size: 16px; letter-spacing: 0.03em; }
+.receipt-box > div { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--mono); font-size: 9px; }
+.receipt-verified, .receipt-sealed { display: inline-flex; align-items: center; gap: 5px; color: var(--green); }
+.receipt-sealed { color: var(--blue); }
+.tender-detail-heading { display: flex; align-items: start; justify-content: space-between; gap: 25px; margin: 55px 0 32px; }
+.tender-detail-heading h1 { font-size: clamp(48px, 5.6vw, 76px); }
+.tender-detail-heading > .status-pill { margin-top: 13px; }
+.tender-detail-meta { display: grid; grid-template-columns: 0.7fr 0.7fr 0.7fr 1.3fr; margin-bottom: 21px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); background: var(--paper); }
+.tender-detail-meta > div { min-height: 96px; padding: 18px 19px; border-right: 1px solid var(--line); }
+.tender-detail-meta > div:last-child { border-right: 0; }
+.tender-detail-meta span { display: block; color: var(--muted); font-family: var(--mono); font-size: 8px; letter-spacing: 0.07em; }
+.tender-detail-meta strong { display: block; margin-top: 13px; font-family: var(--serif); font-size: 25px; font-weight: 400; letter-spacing: -0.04em; }
+.tender-detail-meta > div:last-child strong { font-family: var(--sans); font-size: 12px; letter-spacing: 0; line-height: 1.3; }
+.action-notice { display: flex; align-items: center; gap: 8px; margin-bottom: 21px; padding: 13px 16px; border: 1px solid rgba(22, 134, 106, 0.25); background: var(--green-soft); color: var(--green); font-size: 12px; }
+.tender-detail-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(240px, 0.55fr); gap: 21px; align-items: start; }
+.tender-bids-panel { padding-bottom: 0; }
+.tender-bids-panel .workspace-panel__heading { align-items: end; }
+.panel-intro { max-width: 670px; margin: -6px 0 24px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.bid-room-list { border-top: 1px solid var(--line); }
+.bid-room-row { display: grid; grid-template-columns: 1.35fr 0.75fr 1fr 0.65fr; gap: 15px; align-items: center; min-height: 96px; border-bottom: 1px solid var(--line); }
+.bid-room-row--winner { background: var(--green-soft); }
+.bid-room-row__supplier { display: flex; align-items: center; gap: 10px; }
+.supplier-avatar { display: grid; width: 30px; height: 30px; flex: 0 0 auto; place-items: center; border: 1px solid var(--line); background: var(--white); color: var(--ink); font-family: var(--mono); font-size: 8px; }
+.bid-room-row__supplier strong, .bid-room-row__supplier small, .bid-room-row__value strong, .bid-room-row__value small { display: block; }
+.bid-room-row__supplier strong { font-size: 12px; }
+.bid-room-row__supplier small { margin-top: 4px; color: var(--muted); font-family: var(--mono); font-size: 8px; }
+.bid-room-row__proof .status-pill { font-size: 8px; }
+.bid-room-row__value { display: flex; align-items: center; gap: 6px; color: var(--blue); font-family: var(--mono); font-size: 9px; }
+.bid-room-row__value strong { color: var(--ink); font-family: var(--serif); font-size: 23px; font-weight: 400; letter-spacing: -0.04em; }
+.bid-room-row__value small { max-width: 170px; margin-top: 4px; color: var(--muted); font-family: var(--sans); font-size: 10px; line-height: 1.35; }
+.bid-room-row__action { justify-self: end; text-align: right; }
+.button--small { min-height: 34px; padding: 0 10px; font-size: 10px; }
+.sealed-label, .winner-label, .not-selected-label { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-family: var(--mono); font-size: 8px; text-transform: uppercase; }
+.winner-label { color: var(--green); }
+.tender-side-panel { display: grid; gap: 17px; }
+.tender-side-panel__block { padding: 21px; border-top: 1px solid var(--ink); background: var(--paper); }
+.tender-side-panel__block > div { display: flex; align-items: start; gap: 8px; padding: 13px 0 0; color: var(--ink-soft); font-size: 11px; }
+.tender-side-panel__block > div svg { flex: 0 0 auto; color: var(--violet); }
+.tender-side-panel__block--amber { border-top-color: var(--amber); background: var(--amber-soft); }
+.tender-side-panel__block--amber strong { display: block; margin-top: 16px; font-family: var(--serif); font-size: 22px; font-weight: 400; letter-spacing: -0.03em; }
+.tender-side-panel__block--amber p { margin: 9px 0 0; color: var(--ink-soft); font-size: 11px; line-height: 1.5; }
+.empty-panel { display: grid; place-items: center; gap: 8px; min-height: 190px; color: var(--muted); text-align: center; }
+.empty-panel svg { color: var(--blue); }
+.empty-panel strong { color: var(--ink); font-family: var(--serif); font-size: 22px; font-weight: 400; }
+.empty-panel span { font-size: 12px; }
+
+@media (max-width: 980px) {
+  .workflow-layout, .supplier-flow-layout, .tender-detail-grid { grid-template-columns: 1fr; }
+  .workflow-aside, .tender-side-panel { grid-template-columns: repeat(2, 1fr); }
+  .tender-side-panel > .panel-link { align-self: center; }
+  .bid-room-row { grid-template-columns: 1.25fr 0.75fr 1fr; }
+  .bid-room-row__action { grid-column: 3; grid-row: 1; }
+}
+@media (max-width: 700px) {
+  .workflow-heading { display: block; margin: 43px 0 30px; }
+  .workflow-heading h1, .tender-detail-heading h1, .success-state h1 { font-size: 49px; }
+  .workflow-progress { margin-top: 27px; }
+  .workflow-layout, .supplier-flow-layout, .tender-detail-grid { gap: 15px; }
+  .workflow-form__section, .supplier-brief { padding: 24px 18px 28px; }
+  .workflow-actions { align-items: stretch; flex-direction: column-reverse; padding: 15px 18px; }
+  .workflow-actions .button { width: 100%; }
+  .workflow-aside, .tender-side-panel { grid-template-columns: 1fr; }
+  .tender-detail-heading { align-items: start; flex-direction: column; margin: 43px 0 28px; }
+  .tender-detail-heading > .status-pill { margin-top: 0; }
+  .tender-detail-meta { grid-template-columns: repeat(2, 1fr); }
+  .tender-detail-meta > div:nth-child(2) { border-right: 0; }
+  .tender-detail-meta > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .tender-detail-meta > div { min-height: 88px; padding: 15px; }
+  .tender-detail-meta strong { font-size: 22px; }
+  .tender-bids-panel .workspace-panel__heading { align-items: start; flex-direction: column; }
+  .tender-bids-panel .workspace-panel__heading .button { width: 100%; }
+  .bid-room-row { grid-template-columns: 1fr auto; gap: 12px; padding: 16px 0; }
+  .bid-room-row__proof { grid-column: 1; grid-row: 2; }
+  .bid-room-row__value { grid-column: 1; grid-row: 3; }
+  .bid-room-row__action { grid-column: 2; grid-row: 1 / span 3; }
+  .bid-room-row__value small { max-width: 160px; }
+  .success-state { margin-top: 55px; }
+  .success-state > .button { width: 100%; }
+}

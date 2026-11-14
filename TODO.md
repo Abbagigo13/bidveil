@@ -25,6 +25,17 @@
 - The main CTA enters a polished `/dashboard` preview.
 - The dashboard preview provides buyer and supplier signposts and communicates the future sealed-bid workflow without pretending later-stage systems are complete.
 
+## Phase 1 functional procurement slice — complete when
+
+- The dashboard provides a buyer overview with active tenders, sealed bid counts, supplier proof counts, and an integrity activity log.
+- A buyer can create a tender with a name, description, category, requirements, deadline, bid rule, and reveal policy.
+- A buyer-published tender appears in the workspace and has a tender detail page.
+- A supplier can open an invitation, review requirements and the reveal policy, enter a bid value and proposal summary, and submit a sealed bid.
+- The supplier receives a submission receipt that shows the bid as sealed and eligibility as verified.
+- A buyer can open a reveal window, selectively reveal a bid, and award a revealed bid.
+- The activity log records tender publication, sealed bid submission, reveal, and award actions.
+- Buyer and supplier views are switchable from the dashboard and remain responsive on mobile.
+
 ## Responsive and motion quality — complete when
 
 - Mobile is designed as a first-class experience rather than a squeezed desktop layout.

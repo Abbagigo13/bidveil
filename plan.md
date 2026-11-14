@@ -70,3 +70,8 @@ A polished preview of the future dashboard with a role switcher, activity ledger
 - `client/src/index.css`: design tokens, typography, responsive layout, and signature motifs.
 - `public/manus-routes.json`: declared page routes.
 - `app.config.ts`: project logo metadata before checkpointing.
+
+
+## Phase 1 delivered
+
+The first functional vertical slice uses a shared in-memory workspace provider so the prototype can demonstrate the complete interaction without pretending the Midnight contract is already connected. The buyer can create and publish a tender, configure private requirements and a reveal policy, open the reveal window, selectively reveal a bid, and award it. The supplier can open an invitation, review the brief, submit a bid value and proposal summary, and receive a sealed submission receipt. Activity events are recorded in the workspace integrity log. The next phase will replace these local actions with Midnight Compact state, proofs, wallet transactions, and persistent records.
